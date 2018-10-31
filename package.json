@@ -1,0 +1,23 @@
+{
+  "name": "testcodeforfun",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ts/index.ts",
+  "scripts": {
+    "start": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/minhhuyle/TestCodeForFun.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/minhhuyle/TestCodeForFun/issues"
+  },
+  "homepage": "https://github.com/minhhuyle/TestCodeForFun#readme",
+  "devDependencies": {
+    "typescript": "^3.1.5"
+  }
+}
