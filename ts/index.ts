@@ -1,5 +1,15 @@
-const world = 'test';
+interface RunOptions {
+  program: string;
+  commandline: string[]|string | (() => string);
+}
 
-export function hello(word: string = world): string {
-  return `Hello ${world}! `;
+var opts: RunOptions = {program: "", commandline: ""};
+opts.commandline = '-hello world'; // OK
+opts.commandline = ['-hello', 'world']; // OK
+opts.commandline = "";
+
+console.log("it's empty");
+
+if (opts.commandline.length === 0) { // OK, string and string[] both have 'length' property
+  console.log("it's empty");
 }
