@@ -1,5 +1,6 @@
 package com.minhhuyle.testcodeforfun.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class User {
@@ -8,6 +9,7 @@ public class User {
     private List<User> friendList;
 
     public User() {
+        addressList = new ArrayList<>();
     }
 
     public List<Address> getAddressList() {
