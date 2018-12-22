@@ -1,0 +1,20 @@
+<p>
+  father works!
+</p>
+
+<button (click)="disableButton()">Show</button>
+
+<ng-container *ngIf="shouldShow()">
+
+  <ng-content select="app-child"></ng-content>
+</ng-container>
+
+
+
+<app-child ></app-child>
+<app-child *ngIf="false"></app-child>
+<app-child ></app-child>
+<app-child ></app-child>
+
+
+<button (click)="listenChild()">listen</button>

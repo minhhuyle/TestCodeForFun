@@ -1,6 +1,8 @@
 package com.minhhuyle.testcodeforfun.model;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class User {
@@ -8,13 +10,17 @@ public class User {
     private List<Device> deviceList;
     private List<User> friendList;
 
-    public User() {
+    private User() {
         addressList = new ArrayList<>();
     }
 
     public List<Address> getAddressList() {
 
-        return addressList;
+        return Collections.unmodifiableList(addressList);
+    }
+
+    public void addNewAddress(Address newAddress) {
+        addressList.add(newAddress);
     }
 
     public List<Device> getDeviceList() {
@@ -25,5 +31,9 @@ public class User {
     public List<User> getFriendList() {
 
         return friendList;
+    }
+
+    public static User createDefaultUser() {
+        return new User();
     }
 }
